@@ -2,6 +2,7 @@
 $black: #151515;
 $white: #FFFFFF;
 $red: #631809;
+$light-red: #944d3f;
 $green: #3a6136;
 $dark-green: #415027;
 
@@ -50,9 +51,12 @@ $dark-green: #415027;
 //     @media (min-width: 1024px) and (max-width: 1470px) { @content; }
 //   }
 
-@mixin for-lg {
-    @media (max-width: 1200px) { @content; }
+@mixin for-xl {
+    @media (max-width: 1450px) { @content; }
   }
+@mixin for-lg {
+    @media (max-width: 1100px) { @content; }
+ }
 //   @mixin for-lit-desktop {
 //     @media (max-width: 1050px) { @content; }
 //   }

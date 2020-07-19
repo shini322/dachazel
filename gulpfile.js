@@ -14,9 +14,11 @@ gulp.task('scss', function(){
 
 gulp.task('css', function(){
     return gulp.src([
-      'node_modules/slick-carousel/slick/slick.css',
-      'node_modules/slick-carousel/slick/slick-theme.css',
+    //   'node_modules/slick-carousel/slick/slick.css',
+    //   'node_modules/slick-carousel/slick/slick-theme.css',
     //   'node_modules/fullpage.js/dist/fullpage.css',
+      'node_modules/jquery-nice-select/css/nice-select.css',
+      'node_modules/swiper/css/swiper.min.css',
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
       'node_modules/wowjs/css/libs/animate.css',
     ])
@@ -37,7 +39,9 @@ gulp.task('script', function(){
 
 gulp.task('js', function(){
     return gulp.src([
-        'node_modules/slick-carousel/slick/slick.js',
+        // 'node_modules/slick-carousel/slick/slick.js',
+        'node_modules/jquery-nice-select/js/jquery.nice-select.min.js',
+        'node_modules/swiper/js/swiper.min.js',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
         // 'node_modules/fullpage.js/dist/fullpage.min.js',
         'node_modules/wowjs/dist/wow.min.js',
