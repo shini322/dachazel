@@ -101,6 +101,7 @@
     z-index: 10;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     &--pb{
         padding-bottom: 299px;
     }
@@ -144,6 +145,9 @@
     }
     @include for-md{
         margin-top: 70px;
+    }
+    @include for-md-mob{
+        margin-top: 20px;
     }
     .container{
         text-align: center;
@@ -213,7 +217,7 @@
 }
 .action{
     position: relative;
-    z-index: 10;
+    z-index: 11;
     margin-top: -250px;
     &__inner{
         border-radius: 10px;
@@ -1052,6 +1056,7 @@
     position: relative;
     padding-bottom: 80px;
     margin-top: 138px;
+    z-index: 9;
     &--before-mini{
         padding-bottom: 145px;
         padding-top: 0;
@@ -1207,8 +1212,8 @@
 .breadcrumbs{
     position: relative;
     z-index: 10;
-    margin-top: 52px;
-    margin-bottom: 45px;
+    margin-top: 35px;
+    margin-bottom: 40px;
     @include for-sm{
         margin-top: 15px;
         margin-bottom: 20px;
@@ -1274,6 +1279,10 @@
         width: 385px;
         height: 502px;
         opacity: 0.78;
+        z-index: 8;
+        @include for-md{
+            display: none;
+        }
     }
     &__cone-1{
         top: 0;
@@ -1424,12 +1433,15 @@
     background-color: $green;
     padding: 99px 120px 50px;
     color: $white;
+    &--price{
+        margin-top: 75px;
+    }
     @include for-sm{
         margin-top: 120px;
         padding: 50px 40px;
     }
     @include for-md-mob{
-        margin-top: 120px;
+        margin-top: 75px;
         padding: 30px 20px;
     }
     &__title{
@@ -1814,6 +1826,7 @@
         margin-top: 50px;
     }
     &__img-block{
+        display: block;
         margin: 40px auto 0;
         max-width: 690px;
         height: 420px;
@@ -2054,6 +2067,75 @@
             margin-top: 50px;
         }
     }
+    &__pagination{
+        display: flex;
+        margin-top: 140px;
+        align-items: center;
+        justify-content: center;
+        @include for-md{
+            margin-top: 100px;
+        }
+        @include for-sm{
+            margin-top: 30px;
+        }
+    }
+    &__pagination-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        line-height: 28px;
+        width: 43px;
+        height: 43px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 4px solid transparent;
+        color: $green;
+        transition: .3s;
+        &:hover{
+            border-color: $green;
+        }
+    }
+    &__pagination-link.active{
+        color: $white;
+        background-color: $green;
+    }
+    &__pagination-link + &__pagination-link{
+        margin-left: 10px;
+    }
+    &__pagination-link-img{
+        width: 8px;
+        height: 14px;
+    }
+    &__button-container{
+       text-align: center;
+       margin-top: 170px;
+        @include for-md{
+            margin-top: 100px;
+        }
+        @include for-sm{
+            margin-top: 50px;
+        }
+    }
+    &__button{
+        display: inline-block;
+        max-width: 260px;
+        width: 100%;
+        border: 4px solid $green;
+        font-size: 24px;
+        line-height: 28px;
+        color: $green;
+        min-height: 63px;
+        &:hover{
+            border-color: $green;
+        }
+        @include for-md-mob{
+            max-width: 100%;
+            min-height: 60px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
 }
 .text-item{
     &__inner{
@@ -2065,6 +2147,7 @@
     &__img-block{
         width: 573px;
         flex-shrink: 0;
+        overflow: hidden;
         @include for-sm{
             max-width: 573px;
             width: auto;
@@ -2075,6 +2158,10 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        transition: 1s;
+        &:hover{
+            transform: scale(1.2);
+        }
     }
     &__text-block{
         margin-left: 30px;
@@ -2888,6 +2975,530 @@
     }
     &__button + &__button{
         @include for-sm{
+            margin-top: 20px;
+        }
+    }
+}
+.price{
+    
+    .catalog-page__cone-3{
+        top: 1242px;
+        bottom: auto;
+    }
+    .catalog-page__cone-4{
+        top: 2000px;
+        bottom: auto;
+    }
+    &__row{
+        max-width: 1320px;
+    }
+    &__item + &__item{
+        margin-top: 9px;
+    }
+}
+.price-item{
+    &__title{
+        position: relative;
+        padding: 15px 33px;
+        font-size: 28px;
+        line-height: 32px;
+        background-color: #e3e5de;
+        cursor: pointer;
+        &:before{
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            border-radius: 3px;
+            background-color: $green;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: .3s;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: $green;
+            right: 42px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: .3s;
+        }
+        @include for-sm{
+            padding-left: 15px;
+            padding-right: 40px;
+            font-size: 22px;
+            line-height: 26px;
+            &::before, &::after{
+                transform: translateY(-50%) scale(.7);
+            }
+            &::before{
+                right: 10px;
+            }
+            &:after{
+                right: 22px;
+            }
+        }
+        @include for-md-mob{
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    &__title.open{
+        &::before{
+            transform: translateY(-50%) rotate(45deg);
+            @include for-sm{
+                transform: translateY(-50%) rotate(45deg) scale(.7);
+            }
+        }
+        &::after{
+            transform: translateY(-50%) rotate(45deg);
+            @include for-sm{
+                transform: translateY(-50%) rotate(45deg) scale(.7);
+            }
+        }
+    }
+    &__row{
+        display: none;
+        margin-top: 17px;
+        padding-left: 120px;
+        padding-bottom: 67px;
+        @include for-xl{
+            padding-left: 33px;
+        }
+        @include for-sm{
+            padding-left: 15px;
+        }
+    }
+    // &__row.open{
+    //     display: block;
+    // }
+    &__subitem{
+        padding-bottom: 45px;
+        border-bottom: 1px solid $green;
+        @include for-md{
+            padding-bottom: 20px;
+        } 
+    }
+    &__subitem + &__subitem{
+        margin-top: 31px;
+    }
+    &__subitem-title{
+        position: relative;
+        font-size: 24px;
+        line-height: 28px;
+        color: $green;
+        cursor: pointer;
+        &:before{
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            border-radius: 3px;
+            background-color: $green;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: .3s;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: $green;
+            right: 42px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: .3s;
+        }
+        @include for-sm{
+            padding-left: 15px;
+            padding-right: 40px;
+            font-size: 20px;
+            line-height: 24px;
+            &::before, &::after{
+                transform: translateY(-50%) scale(.7);
+            }
+            &::before{
+                right: 10px;
+            }
+            &:after{
+                right: 22px;
+            }
+        }
+        @include for-md-mob{
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    &__subitem-title.open{
+        &:before{
+            transform: translateY(-50%) rotate(45deg);
+            @include for-sm{
+                transform: translateY(-50%) rotate(45deg) scale(.7);
+            }
+        }
+        &::after{
+            transform: translateY(-50%) rotate(45deg);
+            @include for-sm{
+                transform: translateY(-50%) rotate(45deg) scale(.7);
+            }
+
+        }
+    }
+    &__subitem-row{
+        display: none;
+    }
+    &__table{
+        font-size: 24px;
+        line-height: 28px;
+        @extend %mp-regular;
+        vertical-align: top;
+        @include for-md{
+            display: block;
+        }
+        @include for-md-mob{
+            font-size: 18px;
+            line-height: 22px;
+        }
+        tbody{
+            @include for-md{
+                display: block;
+            }  
+        }
+    }
+    // &__table.open{
+    //     position: relative;
+    //     opacity: 1;
+    //     right: 0;
+    // }
+    &__tr{
+        @include for-md{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid $green;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        &:first-child{
+            font-size: 16px;
+            line-height: 20px;
+            @include for-md{
+                display: none;
+            }
+            .price-item__td{
+                padding-bottom: 45px;
+            }
+        }
+
+    }
+    &__tr + &__tr{
+        @include for-md{
+            margin-top: 15px;
+        }
+    }
+    &__td{
+        padding: 18px 30px;
+        &--mobile{
+            display: none;
+            @include for-md{
+                display: inline;
+            }
+        }
+        @include for-md{
+            padding: 5px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        &:first-child{
+            padding: 18px 30px;
+            padding-left: 0;
+            @include for-md{
+                padding: 5px 0;
+            }
+        }
+    }
+}
+.services{
+    margin-top: 92px;
+    @include for-sm{
+        margin-top: 50px;
+    }
+    &__text{
+        font-size: 24px;
+        line-height: 28px;
+        @extend %mp-regular;
+        text-align: center;
+        @include for-sm{
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    &__row{
+        padding-left: 65px;
+        margin-top: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include for-md{
+            padding-left: 0;
+        }
+    }
+    &__container{
+        width: 25%;
+        margin-bottom: 67px;
+        @include for-sm{
+            width: 33.33333333%;
+        }
+        @include for-md-mob{
+            width: 50%;
+        }
+        @include for-lit-mob{
+            width: 100%;
+        }
+    }
+    &__img-block{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 124px;
+        height: 124px;
+        background-color: $light-green;
+        border-radius: 50%;
+    }
+    &__item-title{
+        margin-top: 28px;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        @include for-sm{
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+}
+.services-page{
+    &__advantages-title{
+        font-size: 36px;
+        line-height: 40px;
+        text-align: center;
+        @include for-sm{
+            font-size: 32px;
+            line-height: 36px;
+        }
+        @include for-md-mob{
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+    .advantages{
+        margin-top: 150px;
+        margin-bottom: 245px;
+        @include for-sm{
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+        @include for-md-mob{
+            margin: 30px 0;
+        }
+        &__row{
+            max-width: 690px;
+            margin: 43px auto 0;
+            @include for-sm{
+                margin-top: 15px;
+            }
+        }
+        &__container{
+            @include for-sm{
+                margin-top: 30px;
+            }
+        }
+        &__item-title{
+            margin-top: 0;
+            color: $green;
+            @include for-md-mob{
+                margin-top: 15px;
+            }
+        }
+    }
+}
+.services-page-item{
+    margin-top: 170px;
+    @include for-sm{
+        margin-top: 70px;
+    }
+    &:first-child{
+        margin-top: 240px;
+    }
+    &__title{
+        font-size: 44px;
+        line-height: 48px;
+        text-align: center;
+        @include for-sm{
+            font-size: 38px;
+            line-height: 42px;
+        }
+        @include for-md-mob{
+            font-size: 32px;
+            line-height: 36px;
+        }
+    }
+    &__row{
+        display: flex;
+        margin-top: 55px;
+        @include for-md{
+            flex-direction: column;
+        }
+        @include for-sm{
+            margin-top: 20px;
+        }
+    }
+    &__img-block{
+        width: 573px;
+        height: 431px;
+        flex-shrink: 0;
+        @include for-lg{
+            width: 400px;
+            height: auto;
+        }
+        @include for-md{
+            width: 573px;
+            height: 431px;
+            margin: 0 auto 30px;
+        }
+        @include for-sm{
+            max-width: 573px;
+            width: 100%;
+            height: 300px;
+        }
+    }
+    &__img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: #909090;
+    }
+    &__text-block{
+        margin-left: 30px;
+        @include for-md{
+           margin-left: 0;
+        }
+    }
+    &__text{
+        font-size: 20px;
+        line-height: 24px;
+        @extend %mp-regular;
+    }
+    &__text + &__text{
+        margin-top: 15px;
+    }
+    &__button-container{
+        display: flex;
+        margin-top: 50px;
+        @include for-sm{
+            margin-top: 30px;
+            flex-direction: column;
+        }
+    }
+    &__button{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 30px;
+        width: 100%;
+        max-width: 323px;
+        height: 80px;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        @include for-sm{
+            padding: 0;
+            height: 60px;
+            max-width: 100%;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    &__button + &__button{
+        margin-left: 50px;
+        @include for-sm{
+            margin-top: 20px;
+            margin-left: 0;
+        }
+    }
+    .button--green{
+        color: $white;
+        &:hover{
+            color: $green;
+        }
+    }
+    .button--white{
+        color: $green;
+        border: 4px solid $green;
+        &:hover{
+            color: $white;
+        }
+    }
+    &__select-block{
+        display: flex;
+        margin-top: 50px;
+        align-items: flex-end;
+        @include for-md{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @include for-sm{
+            margin-top: 20px;
+        }
+    }
+    &__selects{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding-right: 30px;
+        @include for-md{
+            width: 100%;
+        }
+        @include for-sm{
+            padding-right: 0;
+        }
+        
+    }
+    &__select{
+        padding: 8px 15px;
+        width: 100%;
+        max-width: 286px;
+        min-height: 47px;
+        height: auto;
+        border: 1px solid #151515;
+        font-size: 24px;
+        line-height: 28px;
+        @extend %mp-regular;
+        .list{
+            width: 100%;
+            border: 1px solid #151515;
+        }
+        @include for-sm{
+            max-width: 100%;
+        }
+    }
+    &__select + &__select{
+        margin-top: 17px;
+    }
+    &__price{
+        font-size: 24px;
+        line-height: 28px;
+        @include for-md{
             margin-top: 20px;
         }
     }
