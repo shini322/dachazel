@@ -51,6 +51,9 @@ section{
     &--white{
         color: $white;
     }
+    &--green{
+        color: $green;
+    }
     &--before{
         position: relative;
         padding-bottom: 25px;
@@ -175,8 +178,18 @@ section{
     }
 }
 .main{
+    position: relative;
+    z-index: 10;
     &--pt{
         padding-top: 320px;
+    }
+    &--about{
+        .bonus{
+            padding: 76px 0 114px;
+            &__inner{
+                padding-left: 0;
+            }
+        }
     }
 }
 

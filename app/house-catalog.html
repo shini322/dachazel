@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text-page</title>
+    <title>House catalog</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="wrapper">
-        <div class="hero" style="background-image: url(images/hero-bg/text-page-bg.jpg);">
+        <div class="hero" style="background-image: url(images/hero-bg/house-catalog-bg.jpg);">
             <header class="header">
                 <div class="container">
                     <div class="header__upper">
@@ -53,7 +53,7 @@
                     </ul>
                 </div>
             </nav>
-            <h1 class="page-title hero__title">Статьи</h1>
+            <h1 class="page-title hero__title hero__title--pb">Дома из профилированного бруса</h1>
             
         </div>
         <main class="main">
@@ -61,133 +61,165 @@
                 <div class="container">
                     <ul class="breadcrumbs__list">
                         <li><a href="#">Главная</a></li>
-                        <li><a href="#">Компания</a></li>
-                        <li><span>Статьи</span></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li><span>Дома из профилированного бруса</span></li>
                     </ul>
                 </div>
             </div>
-            <section class="text-page">
+            <section class="house-catalog">
                 <img src="img/section-before.png" alt="" class="catalog-page__cone catalog-page__cone-1">
-                <img src="img/section-before.png" alt="" class="catalog-page__cone catalog-page__cone-2">
-                <img src="img/section-before.png" alt="" class="catalog-page__cone catalog-page__cone-3">
+                <img src="img/section-before-2.png" alt="" class="catalog-page__cone catalog-page__cone-2">
+                <img src="img/section-before-2.png" alt="" class="catalog-page__cone catalog-page__cone-3">
                 <img src="img/section-before.png" alt="" class="catalog-page__cone catalog-page__cone-4">
-                <div class="container">                    <div class="catalog-page__row">
-                        <div class="text-item">
-                            <div class="text-item__inner">
-                                <div class="text-item__img-block">
-                                    <img src="images/catalog-item/1.jpg" alt="" class="text-item__img">   
-                                </div>
-                                <div class="text-item__text-block">
-                                    <a href="#" class="text-item__title">
-                                        Название статьи
+                <div class="container">
+                    <div class="house-catalog__inner">
+                        <div class="house-catalog__select-block">
+                            <select class="house-catalog__select">
+                                <option value="1" class="house-catalog__option">Материалы</option>
+                                <option value="1" class="house-catalog__option">Материалы</option>
+                                <option value="1" class="house-catalog__option">Материалы</option>
+                            </select>
+                            <select class="house-catalog__select">
+                                <option value="1" class="house-catalog__option">Сезонность</option>
+                                <option value="1" class="house-catalog__option">Сезонность</option>
+                                <option value="1" class="house-catalog__option">Сезонность</option>
+                            </select>
+                            <select class="house-catalog__select">
+                                <option value="1" class="house-catalog__option">Этажи</option>
+                                <option value="1" class="house-catalog__option">Этажи</option>
+                                <option value="1" class="house-catalog__option">Этажи</option>
+                            </select>
+                            <select class="house-catalog__select">
+                                <option value="1" class="house-catalog__option">Площадь</option>
+                                <option value="1" class="house-catalog__option">Площадь</option>
+                                <option value="1" class="house-catalog__option">Площадь</option>
+                            </select>
+                            <select class="house-catalog__select">
+                                <option value="1" class="house-catalog__option">Цена</option>
+                                <option value="1" class="house-catalog__option">Цена</option>
+                                <option value="1" class="house-catalog__option">Цена</option>
+                            </select>
+                        </div>
+                        <div class="house-catalog__row">
+                            <div class="house-catalog__container">
+                                <div class="house-item house-item--hit">
+                                    <a href="#" class="house-item__img-block">
+                                        <img class="house-item__img" src="images/house-item/1.jpg" alt="">
+                                        <span class="house-item__hit">Хит <br> продаж</span>
                                     </a>
-                                    <p class="text-item__text">
-                                        Краткий анонс, 350-500 знаков. В каждой статье обязательно перелинковывать с другими страницами сайта! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-                                    </p>
-                                    
-                                    <a href="#" class="button button--green text-item__button">
-                                        Читать дальше
+                                    <a href="#" class="house-item__title">
+                                        ДС-052 Бавакс
+                                    </a>
+                                    <div class="house-item__size">
+                                        10×10 м, 73 м2
+                                    </div>
+                                    <div class="house-item__old-price">
+                                        642 400 руб. 
+                                    </div>
+                                    <div class="house-item__price">
+                                        584 000 руб.
+                                    </div>
+                                    <a href="#" class="button button--green house-item__button">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="house-catalog__container">
+                                <div class="house-item">
+                                    <a href="#" class="house-item__img-block">
+                                        <img class="house-item__img" src="images/house-item/2.jpg" alt="">
+                                        <span class="house-item__hit">Хит <br> продаж</span>
+                                    </a>
+                                    <a href="#" class="house-item__title">
+                                        ДС-070 Женева
+                                    </a>
+                                    <div class="house-item__size">
+                                        10×10 м, 85 м2
+                                    </div>
+                                    <div class="house-item__old-price">
+                                        748 000 руб. 
+                                    </div>
+                                    <div class="house-item__price">
+                                        680 000 руб.
+                                    </div>
+                                    <a href="#" class="button button--green house-item__button">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="house-catalog__container">
+                                <div class="house-item">
+                                    <a href="#" class="house-item__img-block">
+                                        <img class="house-item__img" src="images/house-item/3.jpg" alt="">
+                                        <span class="house-item__hit">Хит <br> продаж</span>
+                                    </a>
+                                    <a href="#" class="house-item__title">
+                                        ДС-047 Баден
+                                    </a>
+                                    <div class="house-item__size">
+                                        10×10 м, 91 м2
+                                    </div>
+                                    <div class="house-item__old-price">
+                                        800 800 руб. 
+                                    </div>
+                                    <div class="house-item__price">
+                                        728 000 руб.
+                                    </div>
+                                    <a href="#" class="button button--green house-item__button">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="house-catalog__container">
+                                <div class="house-item">
+                                    <a href="#" class="house-item__img-block">
+                                        <img class="house-item__img" src="images/house-item/4.jpg" alt="">
+                                        <span class="house-item__hit">Хит <br> продаж</span>
+                                    </a>
+                                    <a href="#" class="house-item__title">
+                                        ДС-051 Акваросса
+                                    </a>
+                                    <div class="house-item__size">
+                                        10×10 м, 99 м2
+                                    </div>
+                                    <div class="house-item__old-price">
+                                        875 600 руб. 
+                                    </div>
+                                    <div class="house-item__price">
+                                        796 000 руб.
+                                    </div>
+                                    <a href="#" class="button button--green house-item__button">
+                                        Подробнее
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="text-item">
-                            <div class="text-item__inner">
-                                <div class="text-item__img-block">
-                                    <img src="images/catalog-item/1.jpg" alt="" class="text-item__img">   
-                                </div>
-                                <div class="text-item__text-block">
-                                    <a href="#" class="text-item__title">
-                                        Название статьи
-                                    </a>
-                                    <p class="text-item__text">
-                                        Краткий анонс, 350-500 знаков. В каждой статье обязательно перелинковывать с другими страницами сайта! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-                                    </p>
-                                    
-                                    <a href="#" class="button button--green text-item__button">
-                                        Читать дальше
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-item">
-                            <div class="text-item__inner">
-                                <div class="text-item__img-block">
-                                    <img src="images/catalog-item/1.jpg" alt="" class="text-item__img">   
-                                </div>
-                                <div class="text-item__text-block">
-                                    <a href="#" class="text-item__title">
-                                        Название статьи
-                                    </a>
-                                    <p class="text-item__text">
-                                        Краткий анонс, 350-500 знаков. В каждой статье обязательно перелинковывать с другими страницами сайта! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-                                    </p>
-                                    
-                                    <a href="#" class="button button--green text-item__button">
-                                        Читать дальше
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-item">
-                            <div class="text-item__inner">
-                                <div class="text-item__img-block">
-                                    <img src="images/catalog-item/1.jpg" alt="" class="text-item__img">   
-                                </div>
-                                <div class="text-item__text-block">
-                                    <a href="#" class="text-item__title">
-                                        Название статьи
-                                    </a>
-                                    <p class="text-item__text">
-                                        Краткий анонс, 350-500 знаков. В каждой статье обязательно перелинковывать с другими страницами сайта! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-                                    </p>
-                                    
-                                    <a href="#" class="button button--green text-item__button">
-                                        Читать дальше
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bonus bonus--mini">
+                <img class="bonus__img-house" src="images/bonus/house.jpg" alt="">
+                <div class="container">
+                    <div class="bonus__inner">
+                        <ul class="bonus__list">
+                            <li class="bonus__list-item">Используем энергоэффективные технологии и материалы</li>
+                            <li class="bonus__list-item">Индивидуализируем проекты БЕСПЛАТНО</li>
+                            <li class="bonus__list-item">Специальные предложения по рассрочке и кредитам</li>
+                        </ul>
                         
                     </div>
-                    
                 </div>
             </section>
-            <section class="questions">
-                <div class="questions__inner">
-                    <div class="questions__title">
-                        Остались вопросы?
-                    </div>
-                    <div class="questions__text">
-                        Если вы не нашли чего-то или появились вопросы, напишите нам об этом. Мы свяжемся с вами как можно быстрее.
-                    </div>
-                    <form action="" class="questions__form">
-                        <div class="questions__form-item">
-                            <label for="" class="questions__label">
-                                Имя
-                            </label>
-                            <input class="questions__input" type="text">
-                        </div>
-                        <div class="questions__form-item">
-                            <label for="" class="questions__label">
-                                Телефон
-                            </label>
-                            <input class="questions__input" type="text">
-                        </div>
-                        <div class="questions__form-item">
-                            <label for="" class="questions__label">
-                                Вопрос
-                            </label>
-                            <textarea name="" class="questions__textarea"></textarea>
-                        </div>
-                        <button class="button button--white questions__button">
-                            Перезвоните мне
-                        </button>
-                    </form>
+            <div class="house-catalog-button">
+                <div class="container">
+                    <a href="" class="button button--green house-catalog-button__link">
+                        Смотреть Услуги компании "ДачаЗел"
+                    </a>
                 </div>
-            </section>
+            </div>
+            
         </main>
-        <footer class="footer">
+        <footer class="footer footer--before-mini">
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__container">

@@ -146,3 +146,5 @@ var mySwiper = new Swiper('.action__swiper', {
       }
     },
   });
+
+  $('.house-catalog__select').niceSelect();
